@@ -1,10 +1,8 @@
-<app-header (headerNameClicked) = onHeaderClicked($event)></app-header>
+<app-header></app-header>
   <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf = "headerTabName === 'RECIPES'"></app-recipes>
-      <app-shopping-list *ngIf = "headerTabName === 'SHOPPING_LIST'"></app-shopping-list>
-      <h2>I'm Working</h2>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

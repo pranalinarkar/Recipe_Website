@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   headerTabName : string;
+  constructor(private route: ActivatedRoute, private router: Router){}
 
-  onHeaderClicked(headerTabClicked : string)
-  {
-    console.log(headerTabClicked);
-    this.headerTabName = headerTabClicked;
-  }
 }
 

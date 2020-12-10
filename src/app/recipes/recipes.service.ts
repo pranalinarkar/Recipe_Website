@@ -30,4 +30,9 @@ getter()
         this.shoppingListService.addIngredientsToShoppingList(ingredientsArray);
     }
 
+    getRecipeById(id: number)
+    {
+        return this.recipes[id];
+    }
+
 }

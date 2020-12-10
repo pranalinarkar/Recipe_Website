@@ -1,4 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,20 +11,9 @@ export class HeaderComponent implements OnInit {
 
   @Output() headerNameClicked = new EventEmitter<String>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-  }
-
-  onShoppingListClick()
-  {
-    console.log('cliced');
-    this.headerNameClicked.emit('SHOPPING_LIST');
-  }
-
-  onRecipesClick()
-  {
-    this.headerNameClicked.emit('RECIPES');
   }
 
 }

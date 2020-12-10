@@ -1,12 +1,12 @@
 <p>recipe-list works!</p>
 <div class="row">
     <div class="col-xs-12"></div>
-    <button class="btn btn-success">New Recipe</button>
+    <button class="btn btn-success" (click) = 'onNewRecipeClick()'>New Recipe</button>
 </div>
 <hr>
 <div class="row">
     <div class="col-x-12">
-        <app-recipe-item  *ngFor = "let recipe of recipes"
-        [recipeInput] = recipe ></app-recipe-item>
+        <app-recipe-item  *ngFor = "let recipe of recipes; let i = index"
+        [recipeInput] = recipe [index] = i></app-recipe-item>
     </div>
 </div>
