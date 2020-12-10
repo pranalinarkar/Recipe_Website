@@ -9,7 +9,7 @@ import { RecipeService } from '../../recipes.service';
 })
 export class RecipeItemComponent implements OnInit {
 
-   recipeInput;
+   @Input() recipeInput;
   @Input() index;
 
   constructor(private recipeService: RecipeService, private router: Router, private route: ActivatedRoute) { }

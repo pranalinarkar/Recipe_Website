@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredients } from '../shared/ingredients.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import {Recipe} from './recipe.model';
@@ -16,8 +16,6 @@ export class RecipeService
     'https://static.toiimg.com/thumb/53205522.cms?imgsize=302803&width=800&height=800',
     [ new Ingredients('Meat',2),
     new Ingredients('Butter', 10)])];
-
-    recipeSelected = new EventEmitter<Recipe> ();    
     
     constructor(private shoppingListService: ShoppingListService){}
 
